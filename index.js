@@ -4,8 +4,9 @@ const app = express();
 
 setInterval(async () => {
     try {
-        const response = await axios.get('https://koinx-0jk4.onrender.com');
+        let response = await axios.get('https://koinx-0jk4.onrender.com');
         console.log('Response from external service:', response.data);
+        response = await axios.get('https://long-poll-server.onrender.com');
     } catch (error) {
         console.error('Error making request:', error.message);
     }
