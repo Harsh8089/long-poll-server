@@ -10,7 +10,7 @@ setInterval(async () => {
     } catch (error) {
         console.error('Error making request:', error.message);
     }
-}, 15000); 
+}, 10 * 60 * 1000); 
 
 app.get('/', (req, res) => {
     return res.send("Server is running and polling every 5 seconds.");
